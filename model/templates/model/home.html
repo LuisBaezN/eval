@@ -1,9 +1,21 @@
 {% extends 'plantilla.html'%}
 
 {% block contenido %}
-    <h2>Productos</h2>
+    <section>
+        <h2>Bienvenidos</h2>
 
-    <p>
-        
-    </p>
+        <div class="row row-cols3 g-2">
+            {% for p in prod %}
+            <div class="col">
+                <a style="text-decoration: none;" href="#">
+                    <div class="p-3 border">
+                        <h3>{{p.nombre}}</h3>
+                        $ {{p.precio}}
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </section>
 {% endblock %}
